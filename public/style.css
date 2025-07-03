@@ -1,0 +1,19 @@
+
+body { font-family: sans-serif; background: #f0f0f0; padding: 20px; transition: background 0.3s; }
+.hidden { display: none; }
+input, button { display: block; margin: 10px 0; padding: 10px; border-radius: 10px; }
+#messages { border: 2px solid #ccc; padding: 10px; height: 200px; overflow-y: auto; background: #fff; }
+#messages div { margin: 5px 0; padding: 8px; border: 2px solid #888; border-radius: 8px; animation: fadeIn 0.5s; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.boy-theme { background: #000; color: white; }
+.boy-theme input, .boy-theme button { background: #0a0a0a; color: white; border: 1px solid blue; }
+.boy-theme #messages { background: #111; }
+
+.girl-theme { background: #ffe6f0; color: black; }
+.girl-theme input, .girl-theme button { background: #ffd9ec; color: black; border: 1px solid violet; }
+.girl-theme #messages { background: #fff0f6; }

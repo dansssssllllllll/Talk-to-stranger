@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Talk to Strangers</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="themeToggle">
+        <button onclick="setTheme('boy')">Boy Theme</button>
+        <button onclick="setTheme('girl')">Girl Theme</button>
+    </div>
+
+    <div id="main">
+        <h2>Enter username</h2>
+        <input type="text" id="username" placeholder="Enter username">
+        <label><input type="checkbox" id="remember"> Remember me</label>
+        <button id="startBtn">Start</button>
+        <p id="status">Press start to start chating</p>
+    </div>
+
+    <div id="searching" class="hidden">
+        <p>Finding you a chatmate. Pls... Wait.</p>
+        <button id="stopBtn">Stop finding</button>
+    </div>
+
+    <div id="timeout" class="hidden">
+        <p>Times up! there's no user's online sorry.</p>
+        <button id="tryBtn">Try again</button>
+        <button id="closeBtn">Close</button>
+    </div>
+
+    <div id="chatFound" class="hidden">
+        <p id="foundMsg">Chatmate found!</p>
+    </div>
+
+    <div id="chatBox" class="hidden">
+        <h3>Chat logs</h3>
+        <div id="messages"></div>
+        <input type="text" id="msgInput"><button id="sendBtn">Send</button>
+        <button id="exitBtn">Exit chat</button>
+    </div>
+
+    <div id="historyBox" class="hidden">
+        <h3>Chat History</h3>
+        <div id="history"></div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
